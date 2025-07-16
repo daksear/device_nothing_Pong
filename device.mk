@@ -50,7 +50,6 @@ PRODUCT_PACKAGES += \
     lib_bt_bundle \
     libagm_compress_plugin \
     libagm_mixer_plugin \
-    libagmmixer \
     libagm_pcm_plugin \
     libbatterylistener \
     libfmpal \
@@ -270,9 +269,6 @@ PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 
 TARGET_SUPPORTS_OMX_SERVICE := false
-
-PRODUCT_PACKAGES += \
-    libpalclient
 
 # msm_irqbalance
 PRODUCT_COPY_FILES += \
