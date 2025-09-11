@@ -18,6 +18,13 @@ genfscon proc /charger/nt_otg_enable																				u:object_r:proc_charger:
 # Vibrator
 genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-3/3-005a/leds/aw_vibrator   u:object_r:sysfs_vibrator:s0
 
+# Performance mode
+genfscon proc /sys/vm/dirty_writeback_centisecs                          u:object_r:proc_dirty:s0
+genfscon proc /sys/vm/vfs_cache_pressure                                 u:object_r:proc_drop_caches:s0
+genfscon proc /sys/vm/dirty_ratio                                        u:object_r:proc_dirty:s0
+genfscon proc /sys/kernel/sched_migration_cost_ns                        u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/sched_pelt_multiplier                          u:object_r:proc_sched:s0
+
 # PowerShare
 genfscon sysfs /class/qcom-battery/wireless_boost_en                            u:object_r:sysfs_powershare:s0
 genfscon sysfs /class/qcom-battery/wls_reverse_status                           u:object_r:sysfs_powershare:s0
